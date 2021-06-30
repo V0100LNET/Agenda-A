@@ -15,6 +15,7 @@
                     placeholder="Ingresa tu Correo" 
                     class="input-principal"
                     name="email"
+                    (change)="setDataL($event)"
                 />
                 <label>Contraseña</label>
                 <input 
@@ -22,6 +23,7 @@
                     placeholder="Ingresa tu Contraseña" 
                     class="input-principal"
                     name="password"
+                    (change)="setDataP($event)"
                 />
                 <button class="input-principal btn-login" (click)="submitLogin($event)">Iniciar Sesión</button>
                 <button class="input-principal btn-register" (click)="submitRegister()">Registrarse</button>
