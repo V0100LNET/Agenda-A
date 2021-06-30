@@ -4,6 +4,7 @@ import { AboutComponent } from "./agenda/about/about.component";
 import { LoginComponent } from "./agenda/auth/login/login.component";
 import { RegisterComponent } from "./agenda/auth/register/register.component";
 import { ContactComponent } from "./agenda/contact/contact.component";
+import { AgendaUserComponent } from "./agenda/dashboard/agenda-user.component";
 
 import { HomeComponent } from "./agenda/home/home.component";
 import { ProjectsComponent } from "./agenda/projects/projects.component";
@@ -22,6 +23,10 @@ const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent
+    },
+    {
+        path: 'agenda',
+        component: AgendaUserComponent
     },
     {
         path: 'contact',

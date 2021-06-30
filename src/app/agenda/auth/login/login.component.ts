@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import validateLogin from 'src/app/helpers/validateLogin';
-import { DataLogin } from '../../interfaces/login.inteface';
 import { AgendaService } from '../../services/agenda.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +16,7 @@ export class LoginComponent{
         password: ""
     }
 
-    setDataL(event:any){
+    setDataE(event:any){
         this.dataLogin.email = event.target.value;
     }
 
@@ -29,16 +29,23 @@ export class LoginComponent{
         const validate = await validateLogin(this.dataLogin);
 
         if(validate.email || validate.password){
-            console.log("Todos los datos son obligatorios");
+            Swal.fire({
+                icon: 'error',
+                title: '¡ERROR!',
+                text: validate.email || validate.password,
+                confirmButtonText: 'Aceptar'
+            })
+            return
         }
         
-        console.log(validate)
         if(Object.keys(validate).length === 0){
-            console.log("No hay errores");
             this.loginService.requestLogin(this.dataLogin);
         }
     }
 
-    submitRegister(){}
+    submitRegister(event:any){
+        event.preventDefault();
+        window.location.href = '/register';
+    }
 
 }

@@ -15,6 +15,7 @@
                     placeholder="Ingresa tu primer nombre" 
                     class="input-principal"
                     name="name"
+                    (change)="setDataN($event)"
                 />
                 <label>Correo electrónico</label>
                 <input 
@@ -22,6 +23,7 @@
                     placeholder="Ingresa tu Correo" 
                     class="input-principal"
                     name="email"
+                    (change)="setDataE($event)"
                 />
                 <label>Contraseña</label>
                 <input 
@@ -29,6 +31,7 @@
                     placeholder="Ingresa tu Contraseña" 
                     class="input-principal"
                     name="password"
+                    (change)="setDataP($event)"
                 />
                 <label>Repite tu Contraseña</label>
                 <input 
@@ -36,10 +39,10 @@
                     placeholder="Repite tu Contraseña" 
                     class="input-principal"
                     name="repeat_password"
-                   
+                    (change)="setDataRP($event)"
                 />
-                <button class="input-principal btn-register" (click)="submitRegister()">Registrarse</button>
-                <button class="input-principal btn-login" (click)="submitLogin()">Iniciar Sesión</button>
+                <button class="input-principal btn-register" (click)="submitRegister($event)">Registrarse</button>
+                <button class="input-principal btn-login" (click)="submitLogin($event)">Iniciar Sesión</button>
             </div>
         </form>
     </div>

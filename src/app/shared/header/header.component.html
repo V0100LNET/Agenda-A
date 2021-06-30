@@ -10,8 +10,8 @@
         </nav>
         <div class="content-header__buttons" >
             <div *ngIf="user_localStorage === null">
-                <button class="__login btn-principal" onClick={submitLogin}>Iniciar Sesión</button>
-                <button class="__register btn-principal" onClick={submitRegister} >Registrarse</button>
+                <button class="__login btn-principal" (click)="submitLogin()">Iniciar Sesión</button>
+                <button class="__register btn-principal" (click)="submitRegister()" >Registrarse</button>
                 <a href="/#" onClick={onClickShowMenu}><i class="fas fa-bars"></i></a>
             </div>
             <div *ngIf="user_localStorage != null">

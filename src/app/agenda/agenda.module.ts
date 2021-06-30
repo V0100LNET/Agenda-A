@@ -10,6 +10,10 @@ import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
+import { AgendaUserComponent } from './dashboard/agenda-user.component';
+import { NewContactComponent } from './modal/new-contact/new-contact.component';
+import { EditContactComponent } from './modal/edit-contact/edit-contact.component';
+import { CardsContactComponent } from './cards-contact/cards-contact.component';
 
 
 
@@ -20,7 +24,14 @@ import { LoginComponent } from './auth/login/login.component';
     AboutComponent,
     ProjectsComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    AgendaUserComponent,
+    NewContactComponent,
+    EditContactComponent,
+    CardsContactComponent,
+  ],
+  exports: [
+    AgendaUserComponent
   ],
   imports: [
     CommonModule,

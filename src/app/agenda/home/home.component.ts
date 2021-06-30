@@ -9,7 +9,7 @@ export class HomeComponent {
     constructor() { }
 
     handledRegister(){
-        alert("Llevar al registro");
+        window.location.href = '/register';
     } 
 
 }
