@@ -1,1 +1,731 @@
-/* You can add global styles to this file, and also import other style files */
+/******************************styles principals **************************/
+:root{
+    --primary-color: #1EA5FC;
+    --secundary-color: #234889;
+}
+
+*,
+::after,
+::before{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.btn-principal{
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    padding: 5px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.input-principal{
+    padding: 10px 12px;
+    border-radius: 13px;
+    border: none;
+    border: 1px solid rgb(233, 232, 232);
+    font-size: 1.2rem;
+    /* color: rgb(185, 184, 184); */
+    color: #606060;
+    outline: none;
+}
+
+.opacity{
+    opacity: 0.5;
+}
+
+.opacity-modal{
+    opacity: 0.1;
+    z-index: -999;
+    overflow: hidden;
+}
+
+.show-menu{
+    top: 100% !important;
+}
+
+.show-btn{
+    position: static !important;
+    transition: all 0.8s;
+    background-color: white;
+}
+
+.set-over-flow{
+    overflow: hidden;
+}
+/******************************styles spinner**************************/
+.spinner{
+    width: 80px;
+    height: 80px;
+    margin: 100px auto;
+    background-color: var(--secundary-color);
+    border-radius: 100%;  
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+    position: absolute;
+    top: -10%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+}
+  
+@-webkit-keyframes sk-scaleout {
+    0%{ -webkit-transform: scale(0)}
+    100%{
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+}
+  
+@keyframes sk-scaleout{
+    0% { 
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    } 100% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+/******************************styles header**************************/
+.content-header{
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1365px;
+    margin: auto;
+}
+
+.content-header .content-header__logo .__logo{
+    width: 130px;
+    /* height: 70px; */
+    cursor: pointer;
+}
+
+.content-header .content-header__links a{
+    font-size: 1.3rem;
+    margin-right: 20px;
+    cursor: pointer;
+    /* color: rgb(172, 172, 172); */
+    /* font-weight: bold; */
+    color: #234889;
+    text-decoration: none;
+}
+
+.content-header .content-header__buttons a{
+    font-size: 1.2rem;
+    margin-right: 20px;
+    cursor: pointer;
+    color: rgb(172, 172, 172);
+    text-decoration: none;
+}
+
+.content-header .content-header__buttons .__login{
+    color: var(--secundary-color);
+    border: 1px solid var(--secundary-color);
+    padding: 8px 10px;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.content-header .content-header__buttons .__login:hover{
+    background-color: var(--secundary-color);
+    transition: 0.3s ease;
+    color: white;
+    animation-name: slow-color;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+@keyframes slow-color{
+    0% {background-color: #2e394d;}
+    20% {background-color: #3e4e69;}
+    40% {background-color: #1f3253;}
+    60% {background-color: #234889;}
+    80% {background-color: #234889;}
+    100% {background-color: #234889;}
+}
+
+.content-header .content-header__buttons .__register{
+    border: 1px solid var(--secundary-color);
+    padding: 8px 10px;
+    color: var(--secundary-color);
+    font-size: 1rem;
+}
+
+.content-header .content-header__buttons .btn-saludo{
+    margin-right: 20px;
+    border: none;
+    color: var(--secundary-color);
+}
+
+.content-header .content-header__buttons i{
+    display: none;
+}
+
+/******************************styles home**************************/
+main{
+    display: flex;
+    padding: 100px 50px;
+    justify-content: center;
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+    min-width: 360px;
+}
+
+main .left h1{
+    font-size: 3rem;
+}
+
+main .left p{
+    margin-top: 10px;
+    font-size: 1.1rem;
+    line-height: 2;
+    color: rgb(172, 172, 172);
+}
+
+main .right img{
+    width: 550px;
+}
+
+main .left .obtain-account{
+    border: none;
+    font-size: 1.3rem;
+    padding: 10px 12px;
+    margin-top: 20px;
+    background-color: var(--secundary-color);
+    color: white;
+}
+
+/******************************styles login**************************/
+.login{
+    height: 100vh;
+    background-image: url("../src/assets/img/bg_login.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: linear-gradient(90deg,#904e95,#e96443);
+    padding: 20px;
+    margin: auto;  */
+}
+
+.login .login__form form{
+    background-color: white;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid rgb(224, 224, 224);
+    padding: 35px 30px 70px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(5%);
+}
+
+.login .login__form .login__form__text h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.3rem;
+}
+
+.login .login__form .login__form__text p{
+    color: rgb(172, 172, 172);
+    margin-top: 20px;
+}
+
+.login .login__form__form{
+    margin-top: 20px;
+}
+
+.login .login__form label{
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.login .login__form input{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.login .login__form input::placeholder{
+    color: rgb(212, 212, 212);
+}
+
+/* .login .login__form input:focus{
+    color: rgb(211, 208, 208);
+} * */
+
+.login .login__form .btn-login{
+    color: white;
+    background-color: var(--secundary-color);
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+.login .login__form .btn-register{
+    color: black;
+    background-color: transparent;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    cursor: pointer;
+    border: 1px solid rgb(156, 153, 153);
+}
+
+/******************************styles Register**************************/
+.register{
+    height: 130vh;
+    background:  url("../src/assets/img/bg_login.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    margin: auto;
+}
+
+.register .register__form form{
+    background-color: white;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid rgb(224, 224, 224);
+    padding: 35px 30px 70px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(5%);
+}
+
+.register .register__form .register__form__text h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.3rem;
+}
+
+.register .register__form .register__form__text p{
+    color: rgb(172, 172, 172);
+    margin-top: 20px;
+}
+
+.register .register__form__form{
+    margin-top: 20px;
+}
+
+.register .register__form label{
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.register .register__form input{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.register .register__form input::placeholder{
+    color: rgb(212, 212, 212);
+}
+
+/* .register .register__form input:focus{
+    color: rgb(211, 208, 208);
+}  */
+
+.register .register__form .btn-re.register{
+    color: white;
+    background-color: var(--secundary-color);
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+.register .register__form .btn-register{
+    background-color: var(--secundary-color);
+    width: 100%;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.register .register__form .btn-login{
+    color: black;
+    background-color: transparent;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    cursor: pointer;
+    border: 1px solid rgb(156, 153, 153);
+}
+
+.content-buttons .agenda__title{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/******************************styles Agenda**************************/
+.content__card{
+    margin-top: 50px;
+    padding: 20px;
+    max-width: 1300;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #fcfcfc;
+}
+
+.card{
+    width: 420px;
+    border: 1px solid #ebebec;
+    font-size: 0.7rem;
+    padding-bottom: 15px;
+    padding: 20px 20px 20px 20px;
+    box-shadow: rgb(102, 102, 102);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    /* background-color: #ebecec; */
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card:hover{
+    transform: scale(1.03,1.03);
+    transition: 0.3s all;
+}
+
+.card .card__info .card__info_title{
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.card .card__info h2{
+    margin-top: 5px;
+}
+
+.card .card__info span{
+    font-weight: normal;
+}
+
+.card .card__button-delete{
+    padding: 7px 0;
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--secundary-color);
+}
+
+.card .card__button-delete:hover{
+    background-color: var(--secundary-color);
+    opacity: 0.899;
+}
+
+.card .card__button-edit{
+    padding: 7px 0;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.content-buttons{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.content-buttons > *{
+    margin-right: 10px;
+}
+
+.content-buttons .content-buttons_add-new{
+    padding: 13px 12px;
+    background: none;
+}
+
+.content-buttons .content-buttons_add-new:hover{
+    background-color: var(--secundary-color);
+    transition: 0.3s ease;
+    color: white;
+    animation-name: slow-color;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+@keyframes slow-color{
+    0% {background-color: #2e394d;}
+    20% {background-color: #3e4e69;}
+    40% {background-color: #1f3253;}
+    60% {background-color: #234889;}
+    80% {background-color: #234889;}
+    100% {background-color: #234889;}
+}
+
+/******************************styles modal**************************/
+.add-contact{
+    background-color: rgb(253, 252, 252);
+    width: 500px;
+    height: 480px;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    left: 0;
+    bottom: 20%;
+    margin: auto;
+    border: 1px solid #ebebec;
+    border-radius: 8px;
+    z-index: 3;
+}
+
+.add-contact{
+    padding: 20px;
+}
+
+.add-contact .close-modal{
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    float: right;
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.add-contact .add-contact__title{
+    text-align: center;
+    /* vertical-align: middle; */
+    /* margin-top: 20px; */
+}
+
+.add-contact .add-contact__form{
+    margin-top: 10px;
+}
+
+.add-contact .add-contact__form label{
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.add-contact .add-contact__form input{
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ebebec;
+    padding: 12px 8px;
+    margin-bottom: 5px;
+    outline: none;
+}
+
+.add-contact .add-contact__form .btn-add-contact{
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px 8px;
+    background-color: var(--secundary-color);
+    color: white;
+    font-size: 1.3rem;
+}
+
+/*********************************styles responsive*************************/
+
+/**********************************Header**********************************/
+@media screen and (max-width: 800px) {
+    header{
+        position: relative;
+        height: 65px;
+        z-index: 5;
+    }
+
+    header .content-header .content-header__links{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        /* top: 100%; */
+        top: -100vh;
+        right: 0;
+        left: 0;
+        /* bottom: 0; */
+        margin: auto;
+        text-align: center;
+        /* border: 1px solid red; */
+        background-color: #345080;
+        transition: all 0.8s;
+        height: 350px;
+    }
+
+    header .content-header .content-header__links > *{
+        color: white;
+        padding: 30px 0;
+    }
+
+    header .content-header .content-header__links a{
+        border-bottom: 1px solid rgb(98, 106, 150);
+    }
+
+    header .content-header .content-header__buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .content-header .content-header__buttons a i{
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    header .content-header .content-header__buttons a{
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header .content-header .content-header__buttons a{
+        position: absolute !important;
+        top: -320px !important;
+        right: 20px !important;
+        transition: all 0.8s;
+
+    }
+
+    header .content-header .content-header__buttons{
+        position: absolute;
+        top: 340px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        text-align: center;
+        transition: all 0.8s;
+    }
+    
+    header .content-header .content-header__buttons div button{
+        position: absolute;
+        top: -100vh;
+        transition: all 0.8s;
+    }
+}
+
+/**********************************Home**********************************/
+@media screen and (max-width: 950px){
+    main .left h1{
+        font-size: 2rem;
+    }
+
+    main .right img{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    main{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    main .left{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px){
+    main{
+        padding: 20px 20px;
+    }
+
+    main .right img{
+        margin-top: 40px;
+        width: 300px;
+    }
+
+    main .left{
+        text-align: center;
+    }
+}
+
+/**********************************login**********************************/
+@media screen and (max-width: 550px){
+    .login .login__form form{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .register{
+        padding: 0;
+    }
+
+    .login .login__form{
+        padding-top: 50px;
+    }
+
+    .login .login__form form{
+        padding: 25px 20px 50px 25px;
+    }
+
+    .login .login__form .login__form__text h1{
+        font-size: 1.8rem;
+    }
+}
+
+/**********************************login**********************************/
+@media screen and (max-width: 550px){
+    .register .register__form form{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .register .register__form{
+        padding-top: 0;
+    }
+
+    .register .register__form form{
+        padding: 25px 20px 50px 25px;
+    }
+
+    .register .register__form .register__form__text h1{
+        font-size: 1.8rem;
+    }
+}
+
+/**********************************agenda**********************************/
+@media screen and (max-width: 460px){
+    .content-buttons{
+        padding: 20px;
+    }
+
+    .content-buttons .content-buttons_add-new,
+    .content-buttons .input-principal{
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+/**********************************spinner**********************************/
+@media screen and (max-width: 450px){
+    .spinner{
+        top: 45%;
+    }
+}
+
+/**********************************modal agregar contacto**********************************/
+@media screen and (max-width: 550px) {
+    .add-contact{
+        width: 90%;
+    }
+}

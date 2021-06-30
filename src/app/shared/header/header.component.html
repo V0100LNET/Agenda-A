@@ -1,0 +1,24 @@
+<header>
+    <div class="content-header">
+        <div class="content-header__logo">
+            <a href="/"><img class="__logo" src="../../../assets/img/logo-Ekomercio.png" alt="logo"/></a>
+        </div>
+        <nav class="content-header__links">
+            <a href="/contact">Contacto</a>
+            <a href="/about">Acerca de</a>
+            <a href="/projects">Proyectos</a>
+        </nav>
+        <div class="content-header__buttons" >
+            <div *ngIf="user_localStorage === null">
+                <button class="__login btn-principal" onClick={submitLogin}>Iniciar Sesión</button>
+                <button class="__register btn-principal" onClick={submitRegister} >Registrarse</button>
+                <a href="/#" onClick={onClickShowMenu}><i class="fas fa-bars"></i></a>
+            </div>
+            <div *ngIf="user_localStorage != null">
+                <button class="btn-saludo btn-principal"></button>
+                <button class="__login btn-principal">Cerrar Sesión</button>
+                <a href="/#"><i class="fas fa-bars"></i></a>
+            </div>
+        </div>
+    </div>
+</header>
