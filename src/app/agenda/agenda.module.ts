@@ -5,6 +5,9 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SharedModule } from '../shared/shared.module';
+import { RegisterComponent } from './auth/register/register.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,11 +16,14 @@ import { SharedModule } from '../shared/shared.module';
     HomeComponent,
     ContactComponent,
     AboutComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ]
 })
 export class AgendaModule { }

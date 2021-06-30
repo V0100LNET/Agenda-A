@@ -13,6 +13,10 @@
     margin: 0;
 }
 
+html{
+    font-size: 90%;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;

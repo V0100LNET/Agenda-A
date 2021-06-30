@@ -1,6 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AboutComponent } from "./agenda/about/about.component";
+import { LoginComponent } from "./agenda/auth/login/login.component";
+import { RegisterComponent } from "./agenda/auth/register/register.component";
 import { ContactComponent } from "./agenda/contact/contact.component";
 
 import { HomeComponent } from "./agenda/home/home.component";
@@ -12,6 +14,14 @@ const routes: Routes = [
         path: '',
         component: HomeComponent,
         pathMatch: 'full'
+    },
+    {
+        path: 'register',
+        component: RegisterComponent
+    },
+    {
+        path: 'login',
+        component: LoginComponent
     },
     {
         path: 'contact',
